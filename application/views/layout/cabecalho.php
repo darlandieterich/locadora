@@ -1,0 +1,1 @@
+<a href="<?php echo base_url(); ?>"><img src="<?php echo base_url() ?>img/master.png"></a>
