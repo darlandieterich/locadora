@@ -30,4 +30,9 @@ class Model_filme_emprestimo extends CI_Model
 		$this->db->where('emp_cod',$codemp);
 		$this->db->delete('filme_emprestimo');
 	}
+	function removeTodosFilmesEmprestimo($codemp = NULL)
+	{		
+		$this->db->where('emp_cod',$codemp);
+		$this->db->delete('filme_emprestimo');
+	}
 }

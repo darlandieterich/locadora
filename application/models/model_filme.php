@@ -47,8 +47,7 @@ class Model_filme extends CI_Model
 		$this->fil_linguagem = $_POST['fil_linguagem'];
 		$this->fil_valor = $_POST['fil_valor'];
 		$this->fil_data_lancamento = $_POST['fil_data_lancamento'];
-		$this->fil_midia = $_POST['fil_midia'];
-		$this->fil_img = $_POST['fil_img'];
+		$this->fil_midia = $_POST['fil_midia'];		
 		$this->fil_status = $_POST['fil_status'];
 		$this->fil_lancamento_situacao = $_POST['fil_lancamento_situacao'];
 		$this->db->update('filme',$this,array('fil_cod' => $codigo));

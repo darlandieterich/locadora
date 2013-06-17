@@ -15,18 +15,26 @@
      	<li ><a href="<?php echo base_url() ?>funcionariofilmes" class="active">Filmes</a></li> 
      	<li ><a href="<?php echo base_url() ?>funcionariogenero" class="">Generos</a></li> 
      	<li ><a href="<?php echo base_url() ?>funcionarioemprestimo" class="">Emprestimos</a></li> 
-    </ul>	
+    </ul>
 	<div id="body">
+<?php 
+	if (!empty($sucesso)) {
+		echo '<strong style="color:green;font-size:15px">'.$sucesso.'</strong>';
+	}
+	if (!empty($erro)) {
+		echo '<strong style="color:red;font-size:15px">'.$erro.'</strong>';
+	}
+?>
 		<div class="linha">
 				<div class="celula">
-					<form action="<?php echo base_url()."funcionariofilmes/gravaFilme"?>" method="POST">				
+						<form method="post" action="funcionariofilmes/gravaFilme" enctype="multipart/form-data" />
 						<div class="linha">
 							<div class="celula">Nome</div>
 							<div class="celula"><input type="text" name="fil_nome"/></div>
 						</div>
 						<div class="linha">
 							<div class="celula">Genero</div>
-							<div class="linha">
+							<div class="celula">
 								<select name="gen_cod">
 <?php 
 	foreach ($genero as $campo) {
@@ -74,7 +82,9 @@
 						</div>
 						<div class="linha">
 							<div class="celula">Figura</div>
-							<div class="celula"><input type="text" name="fil_img"/></div>
+							<div class="celula">
+								<input type="file" name="userfile" size="20" />
+							</div>
 						</div>
 						<div class="linha">
 							<div class="celula">Lancamento?</div>

@@ -82,11 +82,7 @@
 						<div class="linha">
 							<div class="celula">Midia</div>
 							<div class="celula"><input type="text" name="fil_midia" value="<?php echo $filme[0]->fil_midia ?>"/></div>
-						</div>
-						<div class="linha">
-							<div class="celula">Figura</div>
-							<div class="celula"><input type="text" name="fil_img" value="<?php echo $filme[0]->fil_img ?>"/></div>
-						</div>
+						</div>						
 						<div class="linha">
 							<div class="celula">Lancamento?</div>
 							<div class="celula">
